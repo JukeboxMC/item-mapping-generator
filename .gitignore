@@ -38,5 +38,5 @@ bin/
 ### Mac OS ###
 .DS_Store
 
-mappings/*
+src/main/resources/mappings/*
 gradle.properties
