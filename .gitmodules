@@ -1,0 +1,3 @@
+[submodule "src/main/resources/BedrockItemUpgradeSchema"]
+	path = src/main/resources/BedrockItemUpgradeSchema
+	url = https://github.com/pmmp/BedrockItemUpgradeSchema
