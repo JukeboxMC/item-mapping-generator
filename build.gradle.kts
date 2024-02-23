@@ -25,7 +25,7 @@ publishing {
         }
         repositories {
             maven {
-                url = uri("https://repo.jukeboxmc.eu/private")
+                url = uri("https://repo.jukeboxmc.eu/snapshots")
                 credentials.username = properties["username"].toString()
                 credentials.password = properties["password"].toString()
             }
