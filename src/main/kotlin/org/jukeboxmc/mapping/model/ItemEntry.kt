@@ -31,4 +31,8 @@ class ItemEntry(private var name: String, private var id: Int, private var remap
             throw AssertionError()
         }
     }
+
+    override fun toString(): String {
+        return "ItemEntry{name=${this.name}, id=${this.id}}"
+    }
 }

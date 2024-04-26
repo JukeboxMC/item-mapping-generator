@@ -14,7 +14,13 @@ object ItemEntryUpdaterBuilder {
 
     private val gson = Gson()
     private val updaters: List<ItemEntryUpdater> = arrayListOf(
-        build(649, "0161_1.20.50.23_beta_to_1.20.60.26_beta.json")
+        build(594, "0121_1.20.0.23_beta_to_1.20.10.24_beta.json"),
+        build(609, "0131_1.20.10.24_beta_to_1.20.20.23_beta.json"),
+        build(618, "0141_1.20.20.23_beta_to_1.20.30.22_beta.json"),
+        build(630, "0151_1.20.30.22_beta_to_1.20.50.23_beta.json"),
+        build(649, "0161_1.20.50.23_beta_to_1.20.60.26_beta.json"),
+        build(662, "0171_1.20.60.26_beta_to_1.20.70.24_beta.json"),
+        build(671, "0181_1.20.70.24_beta_to_1.20.80.24_beta.json")
     )
 
     fun update(itemEntry: ItemEntry, targetVersion: Int): ItemEntry {

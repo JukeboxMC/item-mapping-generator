@@ -40,3 +40,4 @@ bin/
 
 src/main/resources/mappings/*
 gradle.properties
+item_palette/

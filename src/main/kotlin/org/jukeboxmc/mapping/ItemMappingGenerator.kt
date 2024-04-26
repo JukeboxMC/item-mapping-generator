@@ -10,6 +10,7 @@ import java.io.FileOutputStream
 import java.io.FileReader
 import java.io.IOException
 import java.util.*
+import kotlin.collections.LinkedHashMap
 
 /**
  * @author Kaooot
@@ -20,8 +21,14 @@ class ItemMappingGenerator {
     companion object {
         private val gson: Gson = GsonBuilder().setPrettyPrinting().create()
         private val versionToProtocol = mapOf(
+            "1.20.0" to 589,
+            "1.20.10" to 594,
+            "1.20.30" to 618,
+            "1.20.40" to 622,
             "1.20.50" to 630,
-            "1.20.60" to 649
+            "1.20.60" to 649,
+            "1.20.70" to 662,
+            "1.20.80" to 671
         )
 
         @JvmStatic
@@ -62,7 +69,7 @@ class ItemMappingGenerator {
             val sourcePalette: List<ItemEntry> = itemsMap[sourceProtocolVersion]!!
             val targetPalette: List<ItemEntry> = itemsMap[targetProtocolVersion]!!
 
-            val mapping: MutableMap<ItemEntry, ItemEntry> = HashMap<ItemEntry, ItemEntry>()
+            val mapping: MutableMap<ItemEntry, ItemEntry> = LinkedHashMap()
 
             for (itemEntry in sourcePalette) {
                 val target: ItemEntry = ItemEntryUpdaterBuilder.update(itemEntry, targetProtocolVersion)
